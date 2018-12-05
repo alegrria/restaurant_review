@@ -42,9 +42,9 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #footer {
   background-color: #444;
   color: #aaa;
-  font-size: 8pt;
+  font-size: 0.8em;
   letter-spacing: 1px;
-  padding: 25px;
+  padding: 1%;
   text-align: center;
   text-transform: uppercase;
 }
@@ -243,11 +243,11 @@ nav h1 a {
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
+  padding: 4% 2.5% 2%;
   width: 50%;
 }
 #reviews-container {
-  padding: 30px 40px 80px;
+  padding: 1.5% 2% 3.5%;
 }
 #reviews-container h2 {
   color: #f58500;
@@ -276,4 +276,33 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+/* ====================== Media Queries ====================== */
+@media only screen and (max-width: 600px) {
+  #restaurant-container .col-xs-6, #reviews-container .col-xs-6 {
+    display: flex;
+    flex-flow: column;
+  }
+	#restaurant-container {
+		width: auto;
+		order: 1;
+	}
+	.inside #map-container {
+		width: auto;
+		order: 2;
+	}
+	#reviews-container {
+		width: auto;
+		order: 3;
+	}
+	#reviews-list li {
+		width: auto;
+	}
+	#restaurant-img {
+    width: 99%;
+	}
+	#restaurant-cuisine {
+		width: 99%;
+	}
 }
