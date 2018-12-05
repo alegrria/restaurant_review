@@ -9,7 +9,7 @@ body,td,th,p{
 }
 body {
 	background-color: #fdfdfd;
-	margin: 0;
+	margin: 1%;
 	position:relative;
 }
 ul, li {
@@ -279,20 +279,28 @@ nav h1 a {
 }
 
 /* ====================== Media Queries ====================== */
+
 @media only screen and (max-width: 600px) {
-  #restaurant-container .col-xs-6, #reviews-container .col-xs-6 {
-    display: flex;
-    flex-flow: column;
-  }
-	#restaurant-container {
-		width: auto;
+	#breadcrumb {
+		width: 99%;
+	}
+  .inside header {
 		order: 1;
 	}
 	.inside #map-container {
-		width: auto;
+		top: 130px;
+		position: relative;
+		height: 300px;
+		width: 99%;
 		order: 2;
 	}
-	#reviews-container {
+	.inside #restaurant-container {
+		width: auto;
+		order: 3;
+		padding: 0;
+	}
+
+	.inside #reviews-container {
 		width: auto;
 		order: 3;
 	}
@@ -304,5 +312,8 @@ nav h1 a {
 	}
 	#restaurant-cuisine {
 		width: 99%;
+	}
+	#restaurant-address, #restaurant-hours {
+		margin: 2%
 	}
 }
